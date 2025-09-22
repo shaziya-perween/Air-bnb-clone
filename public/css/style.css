@@ -1,0 +1,172 @@
+body{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh !important;
+}
+.container{
+    flex:1;
+}
+
+.navbar{
+    height: 5 rem;
+    background-color: white;
+}
+.navbar-brand{
+    color:  rgb(228, 85, 85) !important;
+
+}
+.fa-house{
+    color: rgb(228, 85, 85) !important;
+
+}
+.fa-brands{
+    color: rgb(228, 85, 85) !important;
+}
+.nav-link{
+    color: black !important;
+}
+/*footer*/
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links ,.f-info-socials,.f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1.2rem ;
+}
+
+
+.f-info{
+    display:flex;
+    height: 8rem;
+    background-color: rgb(187, 172, 172);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+.listing-card{
+    border: none ! important;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    margin: 0 auto 2rem auto;
+    flex: 0 0 calc(100%6)  ;
+    
+
+
+
+
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100%;
+    object-fit: cover !important;
+    height: 15rem !important;
+    display: block !important;
+
+}
+.card-img-top:hover{
+    opacity: 0.8;
+}
+
+.card-body{
+    padding:0 !important;
+}
+
+.listing-card-text p{
+    font-weight:400 ;
+    text-decoration: none;
+    color:#222222;
+}
+.listing-card a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.add-btn{
+    background-color:rgb(230, 90, 90) !important ;
+    border-radius: none !important;
+}
+.edit-btn{
+     background-color:rgb(230, 90, 90) !important ;
+     border-radius: none !important;
+
+}
+.show-img{
+    height:30px ;
+    width: 10px;
+
+}
+.button-group {
+  display: flex;
+  gap: 10px; /* space between buttons */
+  align-items: center;
+}
+.button-group a , 
+.button-group button{
+    padding: 6px 12px;
+  background-color: rgb(197, 76, 76) ;
+  color: white;
+  border: none;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  
+}
+.card{
+   border:black;
+    
+}
+.carousel-row {
+    display:flex;
+    gap:1rem;
+    scrollbar-width: none;
+    overflow-x: auto;
+    flex-wrap: wrap;    
+    
+
+
+}
+.carousel-row ::-webkit-scrollbar {
+  display:flex;
+
+}
+.btn-search{
+    background-color:rgb(197, 76, 76) !important ;
+    color: #fff !important;
+    padding:0 1rem 0 1rem !important;
+    border-radius: 25px !important;
+
+}
+.btn-search:hover{
+    background-color:rgb(197, 76, 76) !important ;
+    color: #fff !important;
+}
+.btn-search i{
+    display: inline;
+    margin-right: 0.5rem;
+}
+.search-inp{
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    border-radius: 25px !important;
+    font-size: small;
+    text-align: center;
+}
+.editContainer input{
+    cursor: pointer !important;
+}
+.dropdownValue{
+    border:2rem;
+    border-radius: 20px;
+}

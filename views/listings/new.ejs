@@ -1,0 +1,74 @@
+<% layout("/layouts/boilerplate") -%>
+  <div class="row mt-3">
+  <div class="col-8 offset-2">
+    
+    <h2>Adding New</h2>
+    <form method="post" action="/listings/new" novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" placeholder="add a catcy title" name="listing[title]" required >
+        <div class="invalid-feedback">Title required</div>
+      </div>
+      <!-- Description -->
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control"  name="listing[description]" required></textarea>
+        <div class="invalid-feedback">Please enter a valid description</div>
+      </div>
+
+      <!-- Image URL -->
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input type="file" class="form-control"  name="listing[image]" placeholder="Copy your link" required>
+      </div>
+     <div class="row">
+      <div class="mb-3 col-md-6 ">
+        <label for="price" class="form-label">price</label>
+        <input  class="form-control"  name="listing[price]" placeholder="Enter price" required>
+        <div class="invalid-feedback">Enter a valid price</div>
+     </div>
+     
+
+  <div class="DropdownValue mb-3 col-md-6">
+     <label for="myDropdown" class="form-label">Category</label>
+     <select id="myDropdown" name="listing[category]" class="form-control" placeholder="select category">
+   <option value="select category">select category</option>
+   <option value="Hotels">Hotels</option>
+   <option value="Flats">Flats</option>
+   <option value="AmazingView">Amazingview</option>
+   <option value="Camping">Camping</option>
+   <option value="Pools">Pools</option>
+   <option value="Beach">Beach</option>
+   <option value="MountainCity">MountainCity</option>
+   <option value="Farms">Farms</option>
+</select>
+</div>
+</div>
+
+      <!--country-->
+       <div class="mb-3 ">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" class="form-control"  name="listing[country]" placeholder="USA" required>
+        <div class="invalid-feedback">location should be valid</div>
+
+      </div>
+      
+
+      <!-- location -->
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control"  name="listing[location]" placeholder="Street 34, California" required>
+        <div class="invalid-feedback">country should be valid</div>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-dark  add-btn mt-3">Add</button>
+      <br /><br />
+      
+
+    </form>
+    </div>
+    </div>
+    <script src="/js/script.js"></script>
+    
+

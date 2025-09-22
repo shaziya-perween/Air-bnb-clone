@@ -1,0 +1,64 @@
+<% layout("/layouts/boilerplate") -%>
+<div class="row mt-3 ">
+  <div class="col-8 offset-2 editContainer"> 
+    <form method="post" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data"  > 
+      <div class="mb-3">
+         <label for="title" class="form-label">Title</label>
+        <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required>
+      </div>
+      <div class="mb-3">
+         <label for="description" class="form-label">Description</label>
+         <textarea name="listing[description]" class="form-control"><%= listing.description %></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="image.url" class="form-label">Image Link</label>
+        <input name="listing[image]"  value="<%= listing.image.url %>" type="file"  class="form-control" >
+      </div>
+      <div class="row">
+      <div class="mb-3 col-md-6">
+        <label for="price" class="form-label">Price</label>
+        <input name="listing[price]" value="<%= listing.price %>" type="number"  class="form-control" required>
+      </div>
+      
+
+<% const categories = ["Hotels", "Flats", "Amazingview", "Camping", "Pools", "Beach", "MountainCity", "Farms"]; %>
+
+<div class="DropdownValue mb-3 col-md-6 position-relative">
+  <label for="myDropdown" class="form-label">Category</label>
+  
+  <select id="myDropdown" name="listing[category]" class="form-control" required ><i class="fa-solid fa-caret-down"></i>
+    <option value="">Select category</option>
+    <% categories.forEach(function(item) { %>
+      <option value="<%= item %>" <%= listing.category === item ? "selected" : "" %>>
+        <%= item %>
+      </option>
+    <% }) %>
+  </select>
+  <span class="position-absolute" style="right: 15px; top: 38px; pointer-events: none;">
+   <i class="fa-solid fa-caret-down"></i>
+  </span>
+</div>
+</div>
+
+      
+      <div class="mb-3 ">
+       <label for="country" class="form-label">Country</label>
+       <input name="listing[country]"value="<%= listing.country %>" type="text"  class="form-control" required>
+      </div>
+      
+      <div class="mb-3">
+         <label for="location" class="form-label">Location</label>
+       <input name="listing[location]" value="<%= listing.location %>"  type="text" class="form-control"required>
+
+      </div> 
+      
+  
+      <button class="btn btn-dark edit-btn mt-3">Edit </button>
+      </form>
+      <br />
+    <form method="post" action="/listings/<%= listing._id %>?_method=DELETE">
+      <button>Delete</button>
+    </form>
+
+</div>
+</div>
